@@ -13,6 +13,8 @@ packetLoss = []
 latency = []
 timeStamps = []
 
+interval = input('Enter Time Interval(s)')
+
 
 
 
@@ -50,7 +52,7 @@ while True:
 					packetLoss.append(100)
 
 
-		print("Sleeping for 10 minutes")
+		
 		
 
 
@@ -84,10 +86,10 @@ while True:
 
 	time.sleep(1)
 	plt.draw()
+	time.sleep(int(interval))
 	plt.pause(10)
-	print("program Continues")
-	plt.close(fig)
-
+	print("Starting Next Test")
+	
 
 
 	
