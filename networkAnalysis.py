@@ -15,6 +15,8 @@ timeStamps = []
 
 
 
+
+
 while True:
 	os.system('speedtest -p yes -f json-pretty -s 12818 > output.json')
 		
@@ -55,11 +57,13 @@ while True:
 	
 	plt.close('all')
 
-	fig, axs = plt.subplots(3, sharex=True)
+	fig, axs = plt.subplots(3, sharex=True, figsize=(12,8))
+	plt.tight_layout(pad = 3)
+	
+	
 	# plt.se
 	# fig.set_size_inches(11, 6, forward=True)
 	
-	plt.tight_layout()
 
 		
 	axs[0].plot(timeStamps, latency)
@@ -78,7 +82,6 @@ while True:
 	plt.xticks(rotation=90)
 
 
-	plt.pause(1e-17)
 	time.sleep(1)
 	plt.draw()
 	plt.pause(10)
